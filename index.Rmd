@@ -4,21 +4,14 @@
 #####################
 title: |
   `oxforddown`: \
-  An Oxford University Thesis \
-  Template for R Markdown
-author: Author Name
+  한글
+author: 이광춘
 college: Your College
 university: University of Oxford
 university-logo: templates/beltcrest.pdf
 submitted-text: A thesis submitted for the degree of
 degree: Doctor of Philosophy
 degreedate: Michaelmas 2018
-abstract: |
-  `r paste(readLines("front-and-back-matter/_abstract.Rmd"), collapse = '\n  ')`
-acknowledgements: |
-  `r paste(readLines("front-and-back-matter/_acknowledgements.Rmd"), collapse = '\n  ')`
-dedication: For Yihui Xie
-abbreviations: "front-and-back-matter/abbreviations" # path to .tex file with abbreviations
 
 #######################
 ## bibliography path ##
@@ -66,9 +59,9 @@ section-numbering-depth: 2 # to which depth should headings be numbered?
 
 ## tables of content ##
 toc-depth: 1 # to which depth should headings be included in table of contents?
-lof: true # include list of figures in front matter?
-lot: true # include list of tables in front matter?
-mini-toc: true  # include mini-table of contents at start of each chapter? (this just prepares it; you must also add \minitoc after the chapter titles)
+lof: false # include list of figures in front matter?
+lot: false # include list of tables in front matter?
+mini-toc: false  # include mini-table of contents at start of each chapter? (this just prepares it; you must also add \minitoc after the chapter titles)
 mini-lot: false  # include mini-list of tables by start of each chapter?
 mini-lof: false  # include mini-list of figures by start of each chapter?
 
@@ -81,7 +74,7 @@ linespacing: 22pt plus2pt # 22pt is official for submission & library copies
 frontmatter-linespacing: 17pt plus1pt minus1pt #spacing in roman-numbered pages (acknowledgments, table of contents, etc.)
 
 ### other stuff ###
-abstractseparate: true  # include front page w/ abstract for examination schools?
+abstractseparate: false  # include front page w/ abstract for examination schools?
 hidelinks: true # false to highlight clickable links with a colored border
 
 ### citation and bibliography style ###
@@ -105,6 +98,7 @@ natbib-bibliography-style: ACM-Reference-Format #or plainnat or some .bst file y
 #####################
 output:
   bookdown::pdf_book:
+    latex_engine: xelatex
     citation_package: biblatex
     template: templates/template.tex
     keep_tex: true

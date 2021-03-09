@@ -45,6 +45,10 @@
 \usepackage[colorlinks=false,pdfpagelabels,hidelinks=$hidelinks$]{hyperref}
 \usepackage{float}
 
+% 한글 ------------------------------------------------
+\usepackage{kotex}
+\usepackage{pdfpages}
+
 
 %UL set section header spacing
 \usepackage{titlesec}
@@ -203,8 +207,11 @@ $endif$
 	\renewcommand{\st}{\textsuperscript{st}}
 	\newcommand{\rd}{\textsuperscript{rd}}
 
-%%%%% THE ACTUAL DOCUMENT STARTS HERE
+%%%%% THE ACTUAL DOCUMENT STARTS HERE --------------------------------------------------------------------------------
 \begin{document}
+
+%%% 겉장
+\includepdf[fitpaper]{templates/canva-cover}
 
 %%%%% CHOOSE YOUR LINE SPACING HERE
 % This is the official option.  Use it for your submission copy and library copy:
@@ -226,9 +233,9 @@ $endif$
 %
 % Oxford University logo on title page
 %
-\def\crest{{\includegraphics{$university-logo$}}}
-\renewcommand{\university}{$university$}
-\renewcommand{\submittedtext}{$submitted-text$}
+% \def\crest{{\includegraphics{$university-logo$}}}
+% \renewcommand{\university}{$university$}
+% \renewcommand{\submittedtext}{$submitted-text$}
 
 
 % Leave this line alone; it gets things started for the real document.
@@ -250,22 +257,22 @@ $endif$
 %%%%% ABSTRACT SEPARATE
 % This is used to create the separate, one-page abstract that you are required to hand into the Exam
 % Schools.  You can comment it out to generate a PDF for printing or whatnot.
-$if(abstractseparate)$
-\begin{abstractseparate}
-  $abstract$
-\end{abstractseparate}
-$endif$
+% $if(abstractseparate)$
+% \begin{abstractseparate}
+%   $abstract$
+% \end{abstractseparate}
+% $endif$
 
 % JEM: Pages are roman numbered from here, though page numbers are invisible until ToC.  This is in
 % keeping with most typesetting conventions.
 \begin{romanpages}
 
 % Title page is created here
-$if(alternative-title-page)$
-\input{$alternative-title-page$}
-$else$
-\maketitle
-$endif$
+% $if(alternative-title-page)$
+% \input{$alternative-title-page$}
+% $else$
+% \maketitle
+% $endif$
 
 %%%%% DEDICATION -- If you'd like one, un-comment the following.
 $if(dedication)$
@@ -283,9 +290,9 @@ $endif$
 
 
 %%%%% ABSTRACT -- Nothing to do here except comment out if you don't want it.
-\begin{abstract}
-	$abstract$
-\end{abstract}
+% \begin{abstract}
+% 	$abstract$
+% \end{abstract}
 
 %%%%% MINI TABLES
 % This lays the groundwork for per-chapter, mini tables of contents.  Comment the following line

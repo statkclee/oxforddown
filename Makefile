@@ -20,7 +20,7 @@ word:
 clean:
 	Rscript -e 'file.remove(list.files(pattern = "*.(log|mtc|maf|aux|bbl|blg|xml)"))'
 	
-clean-knits:
+clean-all:
 	Rscript -e 'file.remove(list.files(pattern = "*.(docx|html|pdf|log|maf|mtc|tex|toc|out|lof|lot|bcf|aux)"))'
 	Rscript -e 'unlink(list.files(pattern = "*_(files|cache)"), recursive = TRUE)'
 

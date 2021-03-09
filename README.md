@@ -6,8 +6,6 @@ Contents
   * [Writing your thesis](#writing-your-thesis)
   * [Building your entire thesis](#building-your-entire-thesis)
     + [PDF output](#pdf-output)
-    + [Gitbook output](#gitbook-output)
-    + [BS4 book output](#bs4-book-output)
     + [Word output](#word-output)
   * [Building a single chapter](#building-a-single-chapter)
   * [Cleaning up generated auxiliary files](#cleaning-up-generated-auxiliary-files)
@@ -20,7 +18,6 @@ Contents
 A template for writing an Oxford University thesis in R Markdown. The template uses the [bookdown](https://bookdown.org) R package together with the [OxThesis LaTeX template](https://github.com/mcmanigle/OxThesis), plus lots of inspiration from [thesisdown](https://github.com/ismayc/thesisdown).
 
 - Sample PDF output: [**docs/_main.pdf**](https://github.com/ulyngs/oxforddown/blob/master/docs/_main.pdf)
-- Sample BS4 book output: [ulyngs.github.io/oxforddown/](https://ulyngs.github.io/oxforddown/)
 
 Examples of actual theses written with `oxforddown`:
 - [Ulysses in Cyberspace: Examining the Effectiveness of Design Patterns for Digital Self-Control](https://ulyngs.github.io/phd-thesis/) by [Ulrik Lyngs](https://ulriklyngs.com)
@@ -67,6 +64,7 @@ For how to write your content with the R Markdown syntax, read through the sampl
   - Option 1 (recommended): 
     - Mac: download and install MacTeX from [tug.org/mactex/](http://www.tug.org/mactex/) (~4 gigs)
     - Windows: download and install MikTex from [miktex.org](https://miktex.org)
+    - Korean: download and install ko.TeX from [ko.TeX](http://wiki.ktug.org/wiki/wiki.php/ko.TeX)
   - Option 2 (not recommended): 
     - install [TinyTeX](https://yihui.name/tinytex/), a minimal LaTeX installation intended for use with R Markdown.
     - manually install the LaTeX package 'cbfonts-fd' by running `tinytex::tlmgr_install('cbfonts-fd')` in an R console - TinyTeX will automatically install other necessary LaTeX packages for you when you build to PDF for the first time
